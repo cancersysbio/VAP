@@ -6,9 +6,9 @@ BAMFLAGS=-lbamtools
 CXXFLAGS=-lz
 LBFLAGS=-Wl,-rpath,$(BAMTOOLS_ROOT)/lib/lib/:$(BOOST_ROOT)/lib
 BOOSTFLAGS=-lboost_regex
-PREFIX=./
-SRC=./src
-TOOLSB=./utils/
+PREFIX=$(CURDIR)
+SRC=$(CURDIR)/src
+TOOLSB=$(CURDIR)/utils/
 BIN=/bin/
 SOURCE_STA=Rseq_bam_stats.cpp
 SOURCE_MFV=mappingFlankingVariants.cpp
@@ -52,8 +52,7 @@ R_scripts:
 
 lutils:
 	@echo "* link utils"
-	@cd $(PREFIX)/$(BIN)/
-	@ln -s ../$(TOOLSB)/* ./
+	@ln -s $(TOOLSB)/* $(PREFIX)/$(BIN)/
 	@echo "* done."
 
 DTrace:
