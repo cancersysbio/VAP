@@ -52,7 +52,8 @@ R_scripts:
 
 lutils:
 	@echo "* link utils"
-	@ln -s $(TOOLSB)/* $(PREFIX)/$(BIN)/
+	@cd $(PREFIX)/$(BIN)/
+	@ln -s ../$(TOOLSB)/* ./
 	@echo "* done."
 
 DTrace:
