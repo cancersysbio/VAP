@@ -34,7 +34,7 @@ The binaries will be built at bin/. ``xxx_directory`` is where lib/ and include/
 Usage
 ---
 
-TRUP can be run with UNIX command-line interface.
+VAP can be run with UNIX command-line interface.
 
 **Getting help message**
 
