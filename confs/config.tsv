@@ -1,0 +1,90 @@
+##########################
+#                        #
+#genearl annotation paths#
+#                        #
+##########################
+#this is the dir that I put almost all the annotation files, so I can reuse this to refer to the dir
+anno	/srv/gsfs0/projects/curtis/ruping/annotation/
+#species, e.g., hg19, mm10, which is the prefix of many annotation files
+species	hg19
+#chromosomes to be analyzed
+chrs	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,X,Y
+#genome fasta file
+GFASTA	$anno/hg19.other/hg19.fasta
+#Rscript bin
+RscriptBin	/srv/gsfs0/projects/curtis/ruping/tools/R/bin/Rscript
+#size of chromosomes
+chromosomeSize	$anno/trupanno/$species/$species.chromosome_size.txt
+####################
+#                  #
+#For read alignment#
+#                  #
+####################
+#BWA bin
+bwaBin	bwa
+#BWA mapping index
+BWAINDEX	$anno/hg19.other/hg19.bwa.index/hg19.fasta
+#bowtieBin
+bowtieBin	bowtie2
+#bowtie2 mapping index
+BowtieINDEX	$anno/trupanno/hg19/hg19.bowtie2_index/hg19/hg19
+#blat database
+blatDatabase	$anno/trupanno/$species/$species.genome_UCSC.2bit
+####################
+#                  #
+#for bam processing#
+#                  #
+####################
+#java bin for gatk
+gatkBin	/srv/gsfs0/projects/curtis/ruping/tools/gatk/GenomeAnalysisTK.jar
+#java bin for markduplicates
+MarkDuplicatesBin	/srv/gs1/software/picard-tools/1.111/MarkDuplicates.jar
+#samtools bin
+samtoolsBin	samtools
+#bcftools bin
+bcftoolsBin	bcftools
+#known indels for indel Realignment
+KNOWNINDEL1	$anno/hg19.other/1000G_phase1.indels.b37.vcf
+#known indels for indel Realignment
+KNOWNINDEL2	$anno/hg19.other/Mills_and_1000G_gold_standard.indels.b37.vcf
+####################
+#                  #
+#mutect snv calling#
+#                  #
+####################
+#muTect bin
+muTectBin	/srv/gsfs0/projects/curtis/pipeline/scripts/muTect-1.1.4.jar
+#vcfSortBin
+vcfSortBin	vcf-sort
+#mutect cosmic annotation vcf
+muTectCOSMIC	$anno/hg19.other/hg19_cosmic_v54_120711.nochr.vcf
+#mutect dbSNP annotation vcf
+muTectDBSNP	$anno/hg19.other/dbsnp_132_b37.leftAligned.nochr.vcf
+####################
+#                  #
+#variant annotation#
+#                  #
+####################
+#annovar bin dir
+ANNOVARDIR	/srv/gsfs0/projects/curtis/ruping/tools/annovar.new/annovar/
+#annovar annotation dir
+ANNOVARDB	$anno/annovardb/humandb.new/
+#UCSC repeat masker file
+repeatMasker	$anno/trupanno/$species/$species.repeats_UCSC.gff
+#UCSC self chain file
+selfChain	$anno/trupanno/$species/$species.SelfChain_UCSC.txt
+############################
+#                          #
+#sequencing stats, TitanCNA#
+#                          #
+############################
+#target region
+targetRegion	$anno/hg19.other/SureSelect_All_Exon_V4_hg19.bed.sorted.bed.w5
+#genome bed 1kb
+w1kBed	$anno/hg19.other/hg19.w1k.bed
+#targeted region for TitanCNA
+targetRegionTitan	$anno/hg19.other/SureSelect_All_Exon_V4_hg19.bed.sorted.bed
+#gc wig for TitanCNA
+gcWigTitan	$anno/hg19.other/hg19.gc.wig
+#map wig for TitanCNA
+mapWigTitan	$anno/hg19.other/hg19.map.wig
