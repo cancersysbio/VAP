@@ -1,5 +1,5 @@
 ## VAP (Variant Assurance Pipeline, version 0.1b)
-designed for Multi Region Sequencing (MRS) of Tumor samples
+for Multi Region Sequencing (MRS) of Tumor specimen
 
 The purpose of this repository is to:
 * Recheck variants in bam: examine the mapping features surrounding any genomic coordinates in the raw read alignment files (.bam).
