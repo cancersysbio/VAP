@@ -16,7 +16,8 @@ Tumor Multi Region Sequencing (MRS) is becoming a valuable resource for inspecti
 Dependencies and Annotation Files
 ---
 * cpan modules: ``Statistics::Basic`` ``Math::CDF`` ``Parallel::ForkManager`` ``Text::NSP::Measures::2D::Fisher::right``
-* See details in ``config.tsv`` file. More info to be added.
+* R libs: ``TitanCNA`` ``HMMcopy`` ``caTools`` ``KernSmooth`` ``RColorBrewer`` ``doMC``
+* More details in ``confs/config.tsv`` file.
 
 
 Installation
