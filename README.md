@@ -3,7 +3,7 @@ designed for Multi Region Sequencing (MRS) of Tumor samples
 
 The purpose of this repository is to:
 * Recheck variants in bam: examine the mapping features surrounding any genomic coordinates in the raw read alignment files (.bam).
-* Sensitive SSNV classification: based on these extracted features, and multiple region samples (MRS, if available), increase the sensitivity for calling low frequency variants while also suprresing sites with dirty mapping features reflective of FPs.
+* Sensitive SSNV classification: based on these extracted features, and multiple region samples (MRS, if available), increase the sensitivity for calling low frequency variants while also suppresing sites with FP-suggestive mapping features.
 * SCNA calling and tumor purity estimation: achived by TitanCNA, jointly estimate local CN and tumor purity.
 * Tumor growth dynamics: the analysis folder contains codes for inspecting tumor MRS variant allele frequency distributions (SFS) and calculating ITH summary statistics for subclonal variants determined based on MRS.
 
