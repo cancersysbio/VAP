@@ -19,7 +19,7 @@ MFV=mappingFlankingVariants
 REC=novelSnvFilter_ACGT
 GS=grep_starts
 
-all: Rseq_bam_stats mappingFlankingVariants novelSnvFilter_ACGT grep_starts perl_scripts R_scripts utils
+all: Rseq_bam_stats mappingFlankingVariants novelSnvFilter_ACGT grep_starts perl_scripts R_scripts lutils
 
 .PHONY: all
 
@@ -50,7 +50,7 @@ R_scripts:
 	@cp $(SRC)/*.R $(PREFIX)/$(BIN)/
 	@echo "* done."
 
-utils:
+lutils:
 	@echo "* link utils"
 	@ln -s $(TOOLSB)/* $(PREFIX)/$(BIN)/
 	@echo "* done."
