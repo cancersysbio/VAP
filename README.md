@@ -42,7 +42,7 @@ TRUP can be run with UNIX command-line interface.
 
 
 
-Contact
+Contact Author
 ---
 Sun Ruping
 
