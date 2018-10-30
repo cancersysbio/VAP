@@ -1087,8 +1087,9 @@ pubOrSub.prob.binom <- function(A, S, pu, sAGP, nt, nb, pa=1, prior="unknown") {
 
     f.pub = ifelse(nb == 0 & nt == 0, 0.5*pu,
             ifelse(nb == 0 & prior == "pub", max((pu - sAGP)/nc, 0),
-            ifelse(nb >= 1 & nt >= 2, nb * pu/nc, (pu * (nt - nb))/nc)))
-    
+            ifelse(nt >= 2, pu/nc, (pu * (nt - nb))/nc)))
+
+    f.pub = min(1,f.pub)
     #p.pub = pbeta(fh.pub,S+1,A+1) - pbeta(fl.pub,S+1,A+1)
     p.pub = pbinom(S, N, f.pub)       #p for pub (under pub vaf, the prob reaching S)
     #p.abs = 1 - pbinom(S, N, f.abs)   #p for abs (under abs, the prob reaching S)
