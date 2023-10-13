@@ -7,6 +7,7 @@ The purpose of this repository is to:
 * SCNA calling and tumor purity estimation: achived by TitanCNA, jointly estimate local CN and tumor purity.
 * Tumor growth dynamics: the analysis folder contains codes for inspecting tumor MRS variant allele frequency distributions (SFS) and calculating ITH summary statistics for subclonal variants determined based on MRS.
 
+**Note: There is an updated and Dockerized version of the pipeline is now available at:**  https://github.com/SunPathLab/ith.Variant
 
 Learn More
 ---
